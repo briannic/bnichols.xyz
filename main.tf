@@ -8,6 +8,8 @@ resource "google_storage_bucket" "static-site" {
 	location = "us-central1"
 	force_destroy = true
 
+    uniform_bucket_level_access = true
+
 	website {
 		main_page_suffix = "index.html"
 		not_found_page = "404.html"
@@ -28,8 +30,9 @@ resource "google_storage_bucket_object" "errorpage" {
     content_type    = "text/html"
 }
 
-resource "google_storage_bucket_access_control" "public_rule" {
-  bucket = google_storage_bucket.static-site.id
-  role   = "READER"
-  entity = "allUsers"
+resource "google_storage_bucket_iam_member" "member" {
+    provider = google-beta
+    bucket   = google_storage_bucket.static-site.name
+    role     = "roles/storage.objectViewer"
+    member   = "allUsers"
 }
