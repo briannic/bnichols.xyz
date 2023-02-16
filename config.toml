@@ -8,7 +8,12 @@ menu.main = []
 
 [params.profileMode]
 title = 'Welcome!'
-description = ''
+description = """\
+    My name is Brian. I built this personal site with [Hugo](https://gohugo.io/), \
+    deployed with [Terraform](https://www.terraform.io/), \
+    and hosted by [Google Cloud Platform](https://cloud.google.com/storage/docs/hosting-static-website). \
+    Checkout the source code on [GitHub](https://github.com/briannic/bnichols.xyz). \
+"""
 buttons = []
 imageUrl = '/images/hs.jpeg'
 
