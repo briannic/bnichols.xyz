@@ -2,3 +2,20 @@ baseURL = 'https://bnichols.xyz/'
 languageCode = 'en-us'
 title = 'bnichols.xyz'
 theme = 'charlolamode'
+
+# Customizations for charlolamode theme
+menu.main = []
+
+[params.profileMode]
+title = 'Welcome!'
+description = ''
+buttons = []
+imageUrl = '/images/hs.jpeg'
+
+[[params.socialIcons]]
+name = 'github'
+url = 'https://github.com/briannic'
+
+[[params.socialIcons]]
+name = 'linkedin'
+url = 'https://www.linkedin.com/in/brian-p-nichols/'
