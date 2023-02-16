@@ -19,3 +19,7 @@ url = 'https://github.com/briannic'
 [[params.socialIcons]]
 name = 'linkedin'
 url = 'https://www.linkedin.com/in/brian-p-nichols/'
+
+[[deployment.targets]]
+name = 'bnichols.xyz'
+URL = 'gs://bnichols.xyz'
